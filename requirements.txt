@@ -1,0 +1,14 @@
+langgraph~=0.2.75
+langchain-core~=0.3.40
+langchain~=0.3.19
+langchain-community~=0.3.18
+dotenv~=0.9.9
+python-dotenv~=1.0.1
+langchain-openai~=0.3.7
+pydantic~=2.10.6
+fastapi~=0.115.8
+protobuf~=5.29.3
+httpx~=0.28.1
+websocket-client~=1.8.0
+supabase~=2.13.0
+PyJWT~=2.10.1
