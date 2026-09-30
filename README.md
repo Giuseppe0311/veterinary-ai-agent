@@ -29,28 +29,6 @@ The repository already contains an **experimental scaffold** for an audio/text p
 
 This path is **not runnable as shipped**. The preference defaults to audio, the Google TTS client is created during module import, its dependency is absent from `requirements.txt`, and the client receives a credential filename where the SDK expects a credentials object. Fixing initialization and configuration is required before either the webhook or audio flow can be demonstrated reliably. Context-aware format selection beyond an explicit user preference remains roadmap work.
 
-## How a message moves through the system
-
-```mermaid
-flowchart LR
-    A[WhatsApp user] --> B[Meta webhook]
-    B --> C[FastAPI signature and event validation]
-    C --> D[LangGraph intent detection]
-    D -->|General chat| E[Veterinary chat tool]
-    D -->|Company service| F[Service guidance prompt]
-    D -->|Company information| G[RAG: local docs + FAISS]
-    E --> H[Text cleanup]
-    F --> H
-    G --> H
-    H --> I{Preferred response}
-    I -->|Text| J[WhatsApp Cloud API]
-    I -->|Audio| K[Google Cloud TTS]
-    K --> L[Meta media upload]
-    L --> J
-```
-
-Conversation history is scoped by the sender's WhatsApp ID. When the stored history reaches ten messages, the workflow attempts to replace it with a concise summary before continuing.
-
 ## Architecture
 
 | Layer | Responsibility |
