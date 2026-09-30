@@ -6,7 +6,8 @@ Veterinary AI Agent for WhatsApp is an early-stage hobby project that explores h
 
 > **Project status:** experimental prototype. The core WhatsApp, routing, RAG, and response-format paths exist in the codebase, but the project still needs configuration hardening, automated tests, deployment documentation, and production safeguards.
 
-![AGENT-VET-BACKED repository preview](docs/assets/repository-preview.png)
+<img width="2138" height="735" alt="image" src="https://github.com/user-attachments/assets/589a732f-154a-4a2b-9bde-d879a2f3ffef" />
+
 
 ## What it does
 
